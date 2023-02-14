@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Bogun\\Desktop\\taxi-main\\testowaa\\taxi\\Testowa\\Testowa\\Testowa.csproj": {}
+    "C:\\Users\\MK\\OneDrive\\Pulpit\\testowaa\\taxi\\taxi\\Testowa\\Testowa\\Testowa.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Bogun\\Desktop\\taxi-main\\testowaa\\taxi\\Testowa\\Testowa\\Testowa.csproj": {
+    "C:\\Users\\MK\\OneDrive\\Pulpit\\testowaa\\taxi\\taxi\\Testowa\\Testowa\\Testowa.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bogun\\Desktop\\taxi-main\\testowaa\\taxi\\Testowa\\Testowa\\Testowa.csproj",
+        "projectUniqueName": "C:\\Users\\MK\\OneDrive\\Pulpit\\testowaa\\taxi\\taxi\\Testowa\\Testowa\\Testowa.csproj",
         "projectName": "Testowa",
-        "projectPath": "C:\\Users\\Bogun\\Desktop\\taxi-main\\testowaa\\taxi\\Testowa\\Testowa\\Testowa.csproj",
-        "packagesPath": "C:\\Users\\Bogun\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bogun\\Desktop\\taxi-main\\testowaa\\taxi\\Testowa\\Testowa\\obj\\",
+        "projectPath": "C:\\Users\\MK\\OneDrive\\Pulpit\\testowaa\\taxi\\taxi\\Testowa\\Testowa\\Testowa.csproj",
+        "packagesPath": "C:\\Users\\MK\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MK\\OneDrive\\Pulpit\\testowaa\\taxi\\taxi\\Testowa\\Testowa\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Bogun\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MK\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
