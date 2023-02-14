@@ -97,7 +97,8 @@ namespace Testowa.Obiekty
            }
         };
         public List<District> GetDistrict() => district;
-        public Taxi GetTaxiById(int id) => taxi.First(x => x.id == id);
+        
+        public District GetDisById(int id) => district.First(x => x.Numer == id);
     }
     
 }

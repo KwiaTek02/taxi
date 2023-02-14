@@ -61,25 +61,54 @@ public class ODDB
         if (wyborz == 0) return;
         try
         {
-            var Taxia = _db.GetTaxiById(wyborz);
-            ShowTaxiData(Taxia);
+            var Disa = _db.GetDisById(wyborz);
+            ShowTaxiData(Disa);
         }
         catch (Exception e)
         {
             Zamowienie();
         }
-        
+
     }
-    public void ShowTaxiData(Taxi Taxia)
+    public void ShowTaxiData(District Disa)
     {
-        //if (Taxia.Numer == )
-        //int CzasDojazdu = Math.Abs(Taxia.OdlegloscOdCentrum) * 5;
-        //Taxia.Status
+        Console.Clear();
+        foreach (var Taxia in _db.GetTaxi())
+        {
+            if (Taxia.AktualnaDzielnica == Disa.Nazwa)
+            {
+                Taxia.CzasDojazdu = 4;
+            }
+            else
+            {
+                Taxia.CzasDojazdu = Math.Abs(Disa.OdlegloscOdCentrum) * 5;
+            }
+            Console.WriteLine(Taxia.CzasDojazdu);
+        }
+
+        //if ()
+        // {
+        /*Console.Clear();
+        Console.ForegroundColor = ConsoleColor.Yellow;
+            // Console.WriteLine($"ZLECENIE REALIZUJE: {Taxia.Samochód} ");
+        int a = 4;
+        Console.WriteLine($"CZAS DOJAZDU:  {a} min");
+        }
+     // else
+        {
         Console.Clear();
         Console.ForegroundColor = ConsoleColor.Yellow;
-        Console.WriteLine($"ZLECENIE REALIZUJE: {Taxia.Samochód} ");
+        //Console.WriteLine($"ZLECENIE REALIZUJE: {Taxia.Samochód} ");
+        int a = (Math.Abs(Disa.OdlegloscOdCentrum) + 0) * 5;
+        Console.WriteLine($"CZAS DOJAZDU:  {a} min");
+        }
 
-        Console.WriteLine($"CZAS DOJAZDU:  ");
+
+
+        //if(Taxia. == null)
+        //int CzasDojazdu = Math.Abs(Taxia.OdlegloscOdCentrum) * 5;
+        //Taxia.Status
+        */
     }
-    
+
 }
