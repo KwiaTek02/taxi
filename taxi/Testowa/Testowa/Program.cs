@@ -21,7 +21,6 @@ while (true)
     {
         Console.Clear();
         Taxi.Zamowienie();
-
     }
     if (wybor == 3)
     {
