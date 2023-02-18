@@ -73,12 +73,12 @@ public class ODDB
             void ShowTaxiData(District Disa)
             {
                 Console.Clear();
-                foreach (var Taxia in _db.GetTaxi())
+                foreach (var adisctrict in _db.GetDistrict())
                 {
-                    foreach (var adisctrict in _db.GetDistrict())
+                    foreach (var Taxia in _db.GetTaxi())
                     {
-                        if (Taxia.Status=="wolny")
-                        { 
+                        if (Taxia.Status == "wolny")
+                        {
                             if (Disa.Numer == 1)
                             {
                                 if (adisctrict.Numer == 1 && Taxia.AktualnaDzielnica == adisctrict.Nazwa)
@@ -194,153 +194,25 @@ public class ODDB
                                     Taxia.CzasDojazdu = Math.Abs(Disa.OdlegloscOdCentrum) * 5 - adisctrict.OdlegloscOdCentrum * 5;
                                 }
                             }
-                            if (Disa.Nazwa == Taxia.AktualnaDzielnica)
-                            {
-                                Taxia.CzasDojazdu = 20;
-                            }
                         }
                         else
                         {
-                            if (Taxia.Status == "zajęta")
-                            {
-                                if (Disa.Numer == 1)
-                                {
-                                    if (adisctrict.Numer == 1 && Taxia.AktualnaDzielnica == adisctrict.Nazwa)
-                                    {
-                                        Taxia.CzasDojazdu += Math.Abs(Disa.OdlegloscOdCentrum) * 5 + (adisctrict.OdlegloscOdCentrum) * 5;
-                                    }
-                                    if (adisctrict.Numer == 2 && Taxia.AktualnaDzielnica == adisctrict.Nazwa)
-                                    {
-                                        Taxia.CzasDojazdu += Math.Abs(Disa.OdlegloscOdCentrum) * 5 + (adisctrict.OdlegloscOdCentrum) * 5;
-                                    }
-                                    if (adisctrict.Numer == 3 && Taxia.AktualnaDzielnica == adisctrict.Nazwa)
-                                    {
-                                        Taxia.CzasDojazdu += Math.Abs(Disa.OdlegloscOdCentrum) * 5 + Math.Abs(adisctrict.OdlegloscOdCentrum) * 5;
-                                    }
-                                    if (adisctrict.Numer == 4 && Taxia.AktualnaDzielnica == adisctrict.Nazwa)
-                                    {
-                                        Taxia.CzasDojazdu += Math.Abs(Disa.OdlegloscOdCentrum) * 5 + adisctrict.OdlegloscOdCentrum * 5;
-                                    }
-                                    if (adisctrict.Numer == 5 && Taxia.AktualnaDzielnica == adisctrict.Nazwa)
-                                    {
-                                        Taxia.CzasDojazdu += Math.Abs(Disa.OdlegloscOdCentrum) * 5 + adisctrict.OdlegloscOdCentrum * 5;
-                                    }
-                                }
-                                if (Disa.Numer == 2)
-                                {
-                                    if (adisctrict.Numer == 1 && Taxia.AktualnaDzielnica == adisctrict.Nazwa)
-                                    {
-                                        Taxia.CzasDojazdu += (Disa.OdlegloscOdCentrum) * 5 + Math.Abs(adisctrict.OdlegloscOdCentrum) * 5;
-                                    }
-                                    if (adisctrict.Numer == 2 && Taxia.AktualnaDzielnica == adisctrict.Nazwa)
-                                    {
-                                        Taxia.CzasDojazdu += (Disa.OdlegloscOdCentrum) * 5 + Math.Abs(adisctrict.OdlegloscOdCentrum) * 5;
-                                    }
-                                    if (adisctrict.Numer == 3 && Taxia.AktualnaDzielnica == adisctrict.Nazwa)
-                                    {
-                                        Taxia.CzasDojazdu += Math.Abs(Disa.OdlegloscOdCentrum) * 5 + Math.Abs(adisctrict.OdlegloscOdCentrum) * 5;
-                                    }
-                                    if (adisctrict.Numer == 4 && Taxia.AktualnaDzielnica == adisctrict.Nazwa)
-                                    {
-                                        Taxia.CzasDojazdu += Math.Abs(Disa.OdlegloscOdCentrum) * 5 + adisctrict.OdlegloscOdCentrum * 5;
-                                    }
-                                    if (adisctrict.Numer == 5 && Taxia.AktualnaDzielnica == adisctrict.Nazwa)
-                                    {
-                                        Taxia.CzasDojazdu += Math.Abs(Disa.OdlegloscOdCentrum) * 5 + adisctrict.OdlegloscOdCentrum * 5;
-                                    }
-                                }
-                                if (Disa.Numer == 3)
-                                {
-                                    if (adisctrict.Numer == 1 && Taxia.AktualnaDzielnica == adisctrict.Nazwa)
-                                    {
-                                        Taxia.CzasDojazdu += (Disa.OdlegloscOdCentrum) * 5 + Math.Abs(adisctrict.OdlegloscOdCentrum) * 5;
-                                    }
-                                    if (adisctrict.Numer == 2 && Taxia.AktualnaDzielnica == adisctrict.Nazwa)
-                                    {
-                                        Taxia.CzasDojazdu += (Disa.OdlegloscOdCentrum) * 5 + Math.Abs(adisctrict.OdlegloscOdCentrum) * 5;
-                                    }
-                                    if (adisctrict.Numer == 3 && Taxia.AktualnaDzielnica == adisctrict.Nazwa)
-                                    {
-                                        Taxia.CzasDojazdu += Math.Abs(Disa.OdlegloscOdCentrum) * 5 + Math.Abs(adisctrict.OdlegloscOdCentrum) * 5;
-                                    }
-                                    if (adisctrict.Numer == 4 && Taxia.AktualnaDzielnica == adisctrict.Nazwa)
-                                    {
-                                        Taxia.CzasDojazdu += Math.Abs(Disa.OdlegloscOdCentrum) * 5 + adisctrict.OdlegloscOdCentrum * 5;
-                                    }
-                                    if (adisctrict.Numer == 5 && Taxia.AktualnaDzielnica == adisctrict.Nazwa)
-                                    {
-                                        Taxia.CzasDojazdu += Math.Abs(Disa.OdlegloscOdCentrum) * 5 + adisctrict.OdlegloscOdCentrum * 5;
-                                    }
-                                }
-                                if (Disa.Numer == 4)
-                                {
-                                    if (adisctrict.Numer == 1 && Taxia.AktualnaDzielnica == adisctrict.Nazwa)
-                                    {
-                                        Taxia.CzasDojazdu += (Disa.OdlegloscOdCentrum) * 5 + Math.Abs(adisctrict.OdlegloscOdCentrum) * 5;
-                                    }
-                                    if (adisctrict.Numer == 2 && Taxia.AktualnaDzielnica == adisctrict.Nazwa)
-                                    {
-                                        Taxia.CzasDojazdu += (Disa.OdlegloscOdCentrum) * 5 + Math.Abs(adisctrict.OdlegloscOdCentrum) * 5;
-                                    }
-                                    if (adisctrict.Numer == 3 && Taxia.AktualnaDzielnica == adisctrict.Nazwa)
-                                    {
-                                        Taxia.CzasDojazdu += Math.Abs(Disa.OdlegloscOdCentrum) * 5 + Math.Abs(adisctrict.OdlegloscOdCentrum) * 5;
-                                    }
-                                    if (adisctrict.Numer == 4 && Taxia.AktualnaDzielnica == adisctrict.Nazwa)
-                                    {
-                                        Taxia.CzasDojazdu += Math.Abs(Disa.OdlegloscOdCentrum) * 5 + adisctrict.OdlegloscOdCentrum * 5;
-                                    }
-                                    if (adisctrict.Numer == 5 && Taxia.AktualnaDzielnica == adisctrict.Nazwa)
-                                    {
-                                        Taxia.CzasDojazdu += Math.Abs(Disa.OdlegloscOdCentrum) * 5 - adisctrict.OdlegloscOdCentrum * 5;
-                                    }
-                                }
-                                if (Disa.Numer == 5)
-                                {
-                                    if (adisctrict.Numer == 1 && Taxia.AktualnaDzielnica == adisctrict.Nazwa)
-                                    {
-                                        Taxia.CzasDojazdu += (Disa.OdlegloscOdCentrum) * 5 + Math.Abs(adisctrict.OdlegloscOdCentrum) * 5;
-                                    }
-                                    if (adisctrict.Numer == 2 && Taxia.AktualnaDzielnica == adisctrict.Nazwa)
-                                    {
-                                        Taxia.CzasDojazdu += (Disa.OdlegloscOdCentrum) * 5 + Math.Abs(adisctrict.OdlegloscOdCentrum) * 5;
-                                    }
-                                    if (adisctrict.Numer == 3 && Taxia.AktualnaDzielnica == adisctrict.Nazwa)
-                                    {
-                                        Taxia.CzasDojazdu += Math.Abs(Disa.OdlegloscOdCentrum) * 5 + Math.Abs(adisctrict.OdlegloscOdCentrum) * 5;
-                                    }
-                                    if (adisctrict.Numer == 4 && Taxia.AktualnaDzielnica == adisctrict.Nazwa)
-                                    {
-                                        Taxia.CzasDojazdu += Math.Abs(Disa.OdlegloscOdCentrum) * 5 - adisctrict.OdlegloscOdCentrum * 5;
-                                    }
-                                    if (adisctrict.Numer == 5 && Taxia.AktualnaDzielnica == adisctrict.Nazwa)
-                                    {
-                                        Taxia.CzasDojazdu += Math.Abs(Disa.OdlegloscOdCentrum) * 5 - adisctrict.OdlegloscOdCentrum * 5;
-                                    }
-                                }
-                            }
-                            if (Disa.Nazwa == Taxia.AktualnaDzielnica)
-                            {
-                                Taxia.CzasDojazdu += 20;
-                            }
+                            Taxia.CzasDojazdu += 12;
                         }
-                    }
-                }
-                foreach (var atax in _db.GetTaxi())
-                {
-                    foreach (var adis in _db.GetDistrict())
-                    {
-                        if (Math.Min(atax.CzasDojazdu, 9999999) < 999999 & atax.AktualnaDzielnica == Disa.Nazwa & adis.Nazwa == atax.AktualnaDzielnica)
+
+                        if (Disa.Nazwa == Taxia.AktualnaDzielnica && Taxia.AktualnaDzielnica == adisctrict.Nazwa)
                         {
+
+                            Taxia.CzasDojazdu = 4;
                             Console.ForegroundColor = ConsoleColor.Yellow;
-                            Console.WriteLine($"ZLECENIE REALIZUJE: {atax.Samochód}");
-                            Console.WriteLine($"CZAS DOJAZDU: {atax.CzasDojazdu} min.");
+                            Console.Clear();
+                            Console.WriteLine($"ZLECENIE REALIZUJE: {Taxia.Samochód}");
+                            Console.WriteLine($"CZAS DOJAZDU: {Taxia.CzasDojazdu} min.");
                             Console.ForegroundColor = ConsoleColor.White;
-                            atax.AktualnaDzielnica = Disa.Nazwa;
-                            atax.Status = "zajęta";
+                            Taxia.AktualnaDzielnica = Disa.Nazwa;
+                            Taxia.Status = "zajęta";
                             Disa.Ilosctaksowek += 1;
-                            adis.Ilosctaksowek -= 1;
-                            break;
+                            adisctrict.Ilosctaksowek -= 1;
                         }
                     }
                 }
@@ -362,8 +234,9 @@ public class ODDB
                     Console.WriteLine($"{ataxi.Samochód} | {ataxi.Status} | {ataxi.AktualnaDzielnica} | ({Math.Abs(ataxi.CzasDojazdu)} min.)");
                     Console.WriteLine();
                 }
-
+                Zamowienie();
             }
+
         }
     }
 }
